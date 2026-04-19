@@ -1,5 +1,5 @@
 package ProyectoNieves;
-import java.util.*;
+import java.util.ArrayList;
 
 public class CentroControl {
     private ArrayList<Vehiculo> vehiculos;
@@ -13,7 +13,9 @@ public class CentroControl {
     public void monitorearFlota(){
         for(Vehiculo i : vehiculos ){
             i.patronMovimiento();
+
+            if (i instanceof IConectable) {
+                ((IConectable) i).sincronizarGPS();
         }
     }
-
 }
