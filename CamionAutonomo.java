@@ -1,6 +1,6 @@
 package ProyectoNieves;
 
- class CamionAutonomo extends Vehiculo implements IConectable {
+ class CamionAutonomo extends Vehiculo {
 
      public CamionAutonomo(String id) {
          super(id);
@@ -8,13 +8,6 @@ package ProyectoNieves;
      }
 
      @Override
-     public void patronMovimiento() {
-         System.out.println("Patron detectado: lineal con aceleración progresiva");
-
+     public String patronMovimiento() {
+         return "Patron detectado: lineal con aceleración progresiva";
      }
-
-     @Override
-     public void sincronizarGPS() {
-         System.out.println("GPS sincronizado correctamente");
-     }
- }
